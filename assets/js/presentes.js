@@ -49,6 +49,26 @@
     });
   });
 
+  // ---------- Crescer ao clicar no produto ----------
+  var productCards = document.querySelectorAll(".product-card");
+  productCards.forEach(function (card) {
+    card.addEventListener("click", function (e) {
+      if (e.target.closest(".product-actions")) return;
+      var wasActive = card.classList.contains("is-active");
+      productCards.forEach(function (c) {
+        c.classList.remove("is-active");
+      });
+      if (!wasActive) card.classList.add("is-active");
+    });
+  });
+  document.addEventListener("click", function (e) {
+    if (!e.target.closest(".product-card")) {
+      productCards.forEach(function (c) {
+        c.classList.remove("is-active");
+      });
+    }
+  });
+
   if (modalClose) modalClose.addEventListener("click", closeModal);
   if (modal) {
     modal.addEventListener("click", function (e) {

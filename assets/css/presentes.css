@@ -59,6 +59,18 @@
   box-shadow: 0 26px 55px -20px rgba(107, 90, 150, 0.4);
 }
 
+.product-card {
+  cursor: pointer;
+}
+
+.product-card.is-active {
+  transform: scale(1.07);
+  box-shadow: 0 32px 65px -18px rgba(107, 90, 150, 0.5);
+  border-color: var(--purple-deep);
+  z-index: 2;
+  position: relative;
+}
+
 .product-img {
   width: 100%;
   aspect-ratio: 4/3;
