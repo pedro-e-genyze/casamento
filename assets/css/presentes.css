@@ -93,7 +93,28 @@
   margin: 0 0 1.4rem;
 }
 
-.product-buy {
+.product-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  width: 100%;
+  padding: 0 1.4rem;
+}
+
+.product-buy,
+.product-installment {
+  width: 100%;
+  text-align: center;
+}
+
+.product-installment.is-disabled {
+  opacity: 0.45;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+.product-buy,
+.product-installment {
   padding: 0.7rem 1.8rem;
   font-size: 0.85rem;
 }
